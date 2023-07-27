@@ -66,7 +66,7 @@ function Install-DefaultPrograms {
 	}
 	C:\SippicomInstall\SetUserFTA.exe C:\SippicomInstall\assoc\VLCassoc.txt
 	Write-Host -BackgroundColor Green -ForegroundColor White "VLC installation done!"
-	Start-Process C:\SippicomInstall\readerdc_de_xa_crd_install.exe -Wait
+	Start-Process C:\SippicomInstall\readerdc64_de_ha_mdr_install.exe -Wait
 	if(!(Test-Path C:\SippicomInstall\assoc\Acroassoc.txt)) {
 		Invoke-WebRequest https://github.com/pytNico/autoDuck/raw/main/resources/Acroassoc.txt -OutFile C:\SippicomInstall\assoc\Acroassoc.txt
 	}
@@ -116,7 +116,7 @@ do {
 		}
 		'4' {
 			Clear-Host
-			if(!(Test-Path C:\SippicomInstall\7zip.msi) -Or !(Test-Path C:\SippicomInstall\VLC.msi) -Or !(Test-Path C:\SippicomInstall\readerdc_de_xa_crd_install.exe)) {
+			if(!(Test-Path C:\SippicomInstall\7zip.msi) -Or !(Test-Path C:\SippicomInstall\VLC.msi) -Or !(Test-Path C:\SippicomInstall\readerdc64_de_ha_mdr_install.exe)) {
 				Download-Resources
 			}
 			Install-DefaultPrograms
